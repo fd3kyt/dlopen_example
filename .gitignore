@@ -1,0 +1,5 @@
+*.pyc
+/build/
+/doc/
+/lib/*
+!/lib/CMakeLists.txt
