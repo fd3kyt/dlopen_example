@@ -1,2 +1,2 @@
 # cd build/;cmake .. && make && ctest
-cd build/;cmake .. && make
+mkdir -p build && cd build/ && cmake .. && make
