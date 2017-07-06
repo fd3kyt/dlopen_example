@@ -7,6 +7,11 @@ cd my-new-bomb-project
 git clone https://github.com/fd3kyt/cpp-project.git .
 ```
 
+## script for build project
+- ./make.sh
+- ./make.sh debug
+- ./make.sh release
+
 ## A script for this
 
 ``` shell
