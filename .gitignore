@@ -1,5 +1,7 @@
 *.pyc
 /build/
+/debug/
+/release/
 /docs/*
 /lib/*
 !/lib/CMakeLists.txt
