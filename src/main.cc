@@ -1,4 +1,4 @@
-// http://man7.org/linux/man-pages/man3/dlopen.3.html
+// change from the example in http://man7.org/linux/man-pages/man3/dlopen.3.html
 
 #include <stdio.h>
 #include <stdlib.h>
