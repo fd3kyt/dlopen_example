@@ -9,10 +9,11 @@ int
 main(void)
 {
   void *handle;
-  double (*cosine)(double);
+  int (*plus_one)(int);
   char *error;
 
-  handle = dlopen(LIBM_SO, RTLD_LAZY);
+  handle = dlopen("libmy_lib.so",
+                  RTLD_LAZY);
   if (!handle) {
     fprintf(stderr, "%s\n", dlerror());
     exit(EXIT_FAILURE);
@@ -20,7 +21,7 @@ main(void)
 
   dlerror();    /* Clear any existing error */
 
-  cosine = (double (*)(double)) dlsym(handle, "cos");
+  plus_one = (int (*)(int)) dlsym(handle, "plus_one");
 
   /* According to the ISO C standard, casting between function
      pointers and 'void *', as done above, produces undefined results.
@@ -44,7 +45,7 @@ main(void)
     exit(EXIT_FAILURE);
   }
 
-  printf("%f\n", (*cosine)(2.0));
+  printf("%d\n", (*plus_one)(23));
   dlclose(handle);
   exit(EXIT_SUCCESS);
 }
